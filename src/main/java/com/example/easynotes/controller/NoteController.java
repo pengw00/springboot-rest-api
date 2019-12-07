@@ -4,14 +4,16 @@ import com.example.easynotes.exception.ResourceNotFoundException;
 import com.example.easynotes.model.Note;
 import com.example.easynotes.repository.NoteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.List;
 
-@CrossOrigin(origins="http://localhost:3000")
 @RestController
 @RequestMapping("/api")
+@EnableAutoConfiguration
+@CrossOrigin(origins="http://localhost:3000")
 public class NoteController {
 
     @Autowired
